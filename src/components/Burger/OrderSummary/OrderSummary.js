@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import Aux from '../../../hoc/Auxiliary/Aux';
+import Aux from '../../../hoc/Auxiliary/Auxiliary';
 import Button from '../../../components/UI/Button/Button';
 
 class OrderSummary extends Component {
@@ -13,7 +13,7 @@ class OrderSummary extends Component {
                 return <li key={igKey + 1}><span style={{ textTransform: 'capitalize' }}>{igKey}</span>:{this.props.ingredients[igKey]}</li>
             });
         return (
-            <Aux>
+            <Auxiliary>
                 <h3>Your Order</h3>
                 <p>A delicious burger with the following ingredients</p>
                 <ul>
