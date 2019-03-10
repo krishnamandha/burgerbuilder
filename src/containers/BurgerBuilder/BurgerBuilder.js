@@ -86,27 +86,30 @@ class BurgerBuilder extends Component {
         for (let key in disabledInfo) {
             disabledInfo[key] = disabledInfo[key] <= 0;
         }
-        return (
-            <Auxiliary>
-                <Modal show={this.state.purchasing} modalClosed={this.purchaseCancelHandler}>
-                    <OrderSummary
-                        ingredients={this.state.ingredients}
-                        price={this.state.totalPrice}
-                        purchaseCancelled={this.purchaseCancelHandler}
-                        purchaseContinued={this.purchaseContinueHandler} />
-                </Modal>
-                <Burger ingredients={this.state.ingredients} />
-                <BuildControls
-                    ingredientAdded={this.addIngredientHandler}
-                    ingredientRemoved={this.removeIngredientHandler}
-                    disabled={disabledInfo}
-                    purchaseable={this.state.purchaseable}
-                    price={this.state.totalPrice}
-                    ordered={this.purchaseHandler} />
-            </Aux>
+        return ( <
+            Auxiliary >
+            <
+            Modal show = { this.state.purchasing }
+            modalClosed = { this.purchaseCancelHandler } >
+            <
+            OrderSummary ingredients = { this.state.ingredients }
+            price = { this.state.totalPrice }
+            purchaseCancelled = { this.purchaseCancelHandler }
+            purchaseContinued = { this.purchaseContinueHandler }
+            /> <
+            /Modal> <
+            Burger ingredients = { this.state.ingredients }
+            /> <
+            BuildControls ingredientAdded = { this.addIngredientHandler }
+            ingredientRemoved = { this.removeIngredientHandler }
+            disabled = { disabledInfo }
+            purchaseable = { this.state.purchaseable }
+            price = { this.state.totalPrice }
+            ordered = { this.purchaseHandler }
+            /> <
+            /Auxiliary>
         );
     }
 }
 
 export default BurgerBuilder;
-
