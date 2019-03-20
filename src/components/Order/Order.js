@@ -26,6 +26,7 @@ const order = props => {
       </span>
     );
   });
+
   return (
     <div className={Classes.Order}>
       <p>{ingredientOutput}</p>
